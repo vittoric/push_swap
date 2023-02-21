@@ -37,7 +37,15 @@ int main(int argc, char **argv)
 
     // Imprime los números almacenados en la lista enlazada en una columna
     current = head;
-	swap_first_two(&current);
+   /*  while (current != NULL) 
+	{
+        printf("%d\n", current->num);
+        current = current->next;
+    }
+     printf("\n\nh");*/
+
+	//swap_first_two(&current);
+    rotate(&current);
     while (current != NULL) 
 	{
         printf("%d\n", current->num);

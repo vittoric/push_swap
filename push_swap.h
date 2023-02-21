@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 15:18:41 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/21 15:26:40 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/02/21 17:47:31 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ typedef struct node{
 }	t_node;
 
 void	swap_first_two(t_node **top);
+void	rotate(t_node **top);
 
 #endif
