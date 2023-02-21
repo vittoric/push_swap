@@ -13,7 +13,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g
 
-SRCS = push_swap.c swap_first_two.c \
+SRCS = push_swap.c swap_first_two.c 
 OBJS = $(SRCS:.c=.o)
 EXEC = prgm
 
