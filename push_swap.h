@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 15:18:41 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/23 16:14:12 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/02/23 19:27:45 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,8 @@ void	revers_rotate(t_node **top);
 void	ps_add_front(t_node **column, t_node *new);
 void	ps_lst_clear(t_node **column);
 void	ps_push(t_node **column1, t_node **column2);
+void	ss_first_two(t_node **top_a, t_node **top_b);
+void	rr_rotate(t_node **top_1, t_node **top_2);
+int 	check_order(t_node *top);
 
 #endif

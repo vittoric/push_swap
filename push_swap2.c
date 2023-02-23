@@ -29,6 +29,7 @@ int main(int argc, char **argv)
         printf("%d\n", current->num);
         current = current->next;
     }
+    printf("La lista esta ordenada si es 1: %d\n",check_order(stack_a));
 
     // Ejemplo de uso de push: mueve el primer elemento de stack_b a stack_a
     ps_push(&stack_a, &stack_b);
