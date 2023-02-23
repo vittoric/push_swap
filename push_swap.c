@@ -1,10 +1,11 @@
-
 #include "push_swap.h"
+
 
 int main(int argc, char **argv)
 {
     t_node *head = NULL;
     t_node *current = NULL;
+    //t_node *b;
     int i;
    	i = 1;
 
@@ -45,12 +46,15 @@ int main(int argc, char **argv)
      printf("\n\nh");*/
 
 	//swap_first_two(&current);
-    rotate(&current);
+    //rotate(&current);
+    revers_rotate(&current);
     while (current != NULL) 
 	{
         printf("%d\n", current->num);
         current = current->next;
     }
+
+    printf("_____\n  a \n");
 
     // Libera la memoria asignada a la lista enlazada
     current = head;
