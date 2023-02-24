@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:42:00 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/23 19:30:29 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/02/24 12:24:27 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	rotate(t_node **top)
 	*top = (*top)-> next;
 	ps_add_back(top, ps_lst_new(current->num));
    //free(current);
+   write(1, "ra", 2);
 	}
 
 void	rr_rotate(t_node **top_1, t_node **top_2)
