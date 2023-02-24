@@ -8,7 +8,7 @@ int main(int argc, char **argv)
     int i = 1;
     while (i < argc) 
 	{
-       int num = atoi(argv[i]);
+       int num = ps_atoi(argv[i]);
 
         // Crea un nuevo nodo
         t_node *new_node = malloc(sizeof(t_node));
@@ -32,7 +32,7 @@ int main(int argc, char **argv)
     ft_printf("La lista esta ordenada si es 1: %d\n",check_order(stack_a));
 
     // Ejemplo de uso de push: mueve el primer elemento de stack_b a stack_a
-    ps_push(&stack_a, &stack_b);
+    ps_push(&stack_a, &stack_b, 'a');
     
 
     // Imprime los números almacenados en stack_a después de hacer push
@@ -52,7 +52,9 @@ int main(int argc, char **argv)
         current = current->next;
     }
     ft_printf("La lista esta ordenada si es 1: %d\n",check_order(stack_b));
-    rotate(&stack_a);
+    rrr_rotate(&stack_a, &stack_b);
+    ss_first_two(&stack_a, &stack_b);
+    rr_rotate(&stack_a, &stack_b);
 
     // Libera la memoria asignada a los nodos de los stacks
     ps_lst_clear(&stack_a);

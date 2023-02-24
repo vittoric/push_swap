@@ -6,7 +6,7 @@
 #    By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/21 15:12:38 by vcodrean          #+#    #+#              #
-#    Updated: 2023/02/24 13:55:37 by vcodrean         ###   ########.fr        #
+#    Updated: 2023/02/24 15:58:12 by vcodrean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ DARK_GREEN =	\033[38;2;75;179;82m
 DARK_YELLOW =	\033[38;5;143m
 
 SRCS = push_swap2.c swap_first_two.c rotate_revers.c\
-		ps_lst.c ps_push.c check_order.c
+		ps_lst.c ps_push.c check_order.c ps_atoi.c
 
 FT_PRINTF_PATH = ft_printf/
 

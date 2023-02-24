@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_push.c                                          :+:      :+:    :+:   */
+/*   ps_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/23 16:09:36 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/24 17:21:19 by vcodrean         ###   ########.fr       */
+/*   Created: 2023/02/24 15:58:30 by vcodrean          #+#    #+#             */
+/*   Updated: 2023/02/24 15:59:49 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ps_push(t_node **column1, t_node **column2, char c)
+long int	ps_atoi(const char *str)
 {
-    t_node  *aux;
-    
-    if (column1)
-    {
-        aux = *column1;
-        *column1 = (*column1)->next;
-        ps_add_front(&*column2, aux);
-        if (c == 'a' || c == 'b')
-            ft_printf("p%c\n", c);
-    }
+	int	res;
+	int	sign;
+
+	res = 0;
+	sign = 1;
+	while (*str == 32 || (*str >= 9 && *str <= 13))
+	str++;
+	if (*str == '-')
+	sign *= -1;
+	if (*str == '-' || *str == '+')
+	str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		res = res * 10 + *str - '0';
+		str++;
+	}
+	return (res * sign);
 }

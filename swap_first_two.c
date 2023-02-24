@@ -6,13 +6,13 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:35:40 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/23 18:30:30 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/02/24 17:25:53 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	swap_first_two(t_node **top)
+void	swap_first_two(t_node **top, char c)
 {
 	t_node	*first;
 	t_node	*second;
@@ -29,10 +29,13 @@ void	swap_first_two(t_node **top)
 	temp = second -> next;
 	second -> next = first;
 	first -> next = temp;
+	if (c == 'a' || c == 'b')
+		ft_printf("s%c\n", c);
 }
 
 void	ss_first_two(t_node **top_a, t_node **top_b)
 {
-	swap_first_two(&*top_a);
-	swap_first_two(&*top_b);
+	swap_first_two(&*top_a, 's');
+	swap_first_two(&*top_b, 's');
+	ft_printf("ss\n");
 }

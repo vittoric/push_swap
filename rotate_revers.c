@@ -6,13 +6,13 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:42:00 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/24 12:24:27 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/02/24 17:28:06 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rotate(t_node **top)
+void	rotate(t_node **top, char c)
 {
 	t_node	*current;
 
@@ -23,15 +23,17 @@ void	rotate(t_node **top)
 	*top = (*top)-> next;
 	ps_add_back(top, ps_lst_new(current->num));
    //free(current);
-   write(1, "ra", 2);
+   if (c == 'a' || c == 'b')
+		ft_printf("r%c\n", c);
 	}
 
 void	rr_rotate(t_node **top_1, t_node **top_2)
 {
-	rotate(&*top_1);
-	rotate(&*top_2);
+	rotate(&*top_1, 'r');
+	rotate(&*top_2, 'r');
+	ft_printf("rr\n");
 }
-void	revers_rotate(t_node **top)
+void	revers_rotate(t_node **top, char c)
 {
 	t_node *aux = *top;
 	
@@ -43,10 +45,13 @@ void	revers_rotate(t_node **top)
 	*top = aux->next;
 	aux->next = NULL;
 	//ps_add_front(top, aux);
+	if (c == 'a' || c == 'b')
+		ft_printf("rr%c\n", c);
 }
 
 void	rrr_rotate(t_node **top_1, t_node **top_2)
 {
-	revers_rotate(&*top_1);
-	revers_rotate(&*top_2);
+	revers_rotate(&*top_1, 'r');
+	revers_rotate(&*top_2, 'r');
+	ft_printf("rrr\n");
 }

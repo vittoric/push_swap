@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_push.c                                          :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/23 16:09:36 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/24 17:21:19 by vcodrean         ###   ########.fr       */
+/*   Created: 2022/12/21 18:34:47 by vcodrean          #+#    #+#             */
+/*   Updated: 2022/12/28 11:28:38 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_printf.h"
 
-void    ps_push(t_node **column1, t_node **column2, char c)
+int	ft_strlen( const char *str)
 {
-    t_node  *aux;
-    
-    if (column1)
-    {
-        aux = *column1;
-        *column1 = (*column1)->next;
-        ps_add_front(&*column2, aux);
-        if (c == 'a' || c == 'b')
-            ft_printf("p%c\n", c);
-    }
+	int	size;
+
+	size = 0;
+	while (str && str[size])
+	{
+		++size;
+	}
+	return (size);
 }

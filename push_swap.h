@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 15:18:41 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/24 13:55:46 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/02/24 17:30:39 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,19 @@ typedef struct node{
 	struct node	*next;
 }	t_node;
 
-void	swap_first_two(t_node **top);
-void	rotate(t_node **top);
+void	swap_first_two(t_node **top, char c);
+void	rotate(t_node **top, char c);
 t_node	*ps_lst_last(t_node *first);
 void	ps_add_back(t_node **column, t_node *new);
 t_node	*ps_lst_new(int num);
-void	revers_rotate(t_node **top);
+void	revers_rotate(t_node **top, char c);
 void	ps_add_front(t_node **column, t_node *new);
 void	ps_lst_clear(t_node **column);
-void	ps_push(t_node **column1, t_node **column2);
+void    ps_push(t_node **column1, t_node **column2, char c);
 void	ss_first_two(t_node **top_a, t_node **top_b);
 void	rr_rotate(t_node **top_1, t_node **top_2);
+void	rrr_rotate(t_node **top_1, t_node **top_2);
 int 	check_order(t_node *top);
+long int	ps_atoi(const char *str);
 
 #endif

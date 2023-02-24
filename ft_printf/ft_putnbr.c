@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_push.c                                          :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/23 16:09:36 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/24 17:21:19 by vcodrean         ###   ########.fr       */
+/*   Created: 2022/12/28 11:48:35 by vcodrean          #+#    #+#             */
+/*   Updated: 2023/01/03 13:02:18 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "ft_printf.h"
 
-void    ps_push(t_node **column1, t_node **column2, char c)
+int	ft_putnbr(int n)
 {
-    t_node  *aux;
-    
-    if (column1)
-    {
-        aux = *column1;
-        *column1 = (*column1)->next;
-        ps_add_front(&*column2, aux);
-        if (c == 'a' || c == 'b')
-            ft_printf("p%c\n", c);
-    }
+	unsigned int	i;
+
+	i = 0;
+	if (n == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+		return (11);
+	}
+	if (n < 0)
+	{
+		i += ft_putchar('-');
+		n *= -1;
+	}
+	if (n > 9)
+	{
+		i += ft_putnbr(n / 10);
+		i += ft_putchar(n % 10 + '0');
+	}
+	else
+		i += ft_putchar(n + '0');
+	return (i);
 }
