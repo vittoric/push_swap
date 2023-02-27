@@ -32,12 +32,21 @@ int main(int argc, char **argv)
     
   
         int size_list = ps_lst_size(stack_a);
-        int index = 0;
+        //int index = 0;
+    if (size_list == 3)
+    {
+            algorithm3(&current);
+    } else
+        ft_printf("Hola caracola");
+        /*
     while (index < size_list) 
    	{
         ps_pair(&stack_a, &stack_b);
         index++;
-    }
+    }*/
+    
+   
+   // ft_printf("Total movimientos: %d\n", index);
     ft_printf("\nDespués de buscar pares stack_a:\n");
 
     
@@ -48,7 +57,7 @@ int main(int argc, char **argv)
     
 
     // Imprime los números almacenados en stack_a después de hacer push
-    current = stack_a;
+   // current = stack_a;
    // ft_printf("\nDespués de push stack_a:\n");
     while (current != NULL) 
 	{
