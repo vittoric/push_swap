@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 17:20:12 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/23 16:02:37 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/02/27 15:45:53 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,3 +71,20 @@ void	ps_lst_clear(t_node **column)
 	}
 	free(*column);
 	}
+
+int	ps_lst_size(t_node *column)
+{
+	int	i;
+	t_node *aux;
+
+	i = 0;
+	if (!column)
+		return (0);
+	aux = column;
+	while (aux)
+	{
+		i++;
+		aux = aux->next;
+	}
+	return (i);
+}

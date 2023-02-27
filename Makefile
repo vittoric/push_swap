@@ -6,7 +6,7 @@
 #    By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/21 15:12:38 by vcodrean          #+#    #+#              #
-#    Updated: 2023/02/24 15:58:12 by vcodrean         ###   ########.fr        #
+#    Updated: 2023/02/27 15:49:40 by vcodrean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,8 @@ DARK_GREEN =	\033[38;2;75;179;82m
 DARK_YELLOW =	\033[38;5;143m
 
 SRCS = push_swap2.c swap_first_two.c rotate_revers.c\
-		ps_lst.c ps_push.c check_order.c ps_atoi.c
+		ps_lst.c ps_push.c check_order.c ps_atoi.c ps_pair.c\
+		
 
 FT_PRINTF_PATH = ft_printf/
 
@@ -43,7 +44,7 @@ RM = rm -f
 
 %.o: %.c
 	@echo "${BLUE} ◎ $(BROWN)Compiling   ${MAGENTA}→   $(CYAN)$< $(DEF_COLOR)"
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(FT_PRINTF_PATH)
+	@$(CC) $(CFLAGS) -c $< -o $@ -I $(FT_PRINTF_PATH)
 
 OBJS = ${SRCS:.c=.o}
 
@@ -51,7 +52,7 @@ all: $(EXEC)
 
 $(EXEC): $(OBJS)
 	@make -C $(FT_PRINTF_PATH) --silent
-	$(CC) $(CFLAGS) ${SRCS} -o $(EXEC) -I./ft_printf -L./ft_printf -lftprintf 
+	@$(CC) $(CFLAGS) ${SRCS} -o $(EXEC) -I./ft_printf -L./ft_printf -lftprintf 
 	@echo "\n$(GREEN) Created $(EXEC) ✓ $(DEF_COLOR)\n"
 
 clean:
@@ -60,8 +61,8 @@ clean:
 	@echo "\n${BLUE} ◎ $(RED)All objects cleaned successfully ${BLUE}◎$(DEF_COLOR)\n"
 
 fclean:
-	$(RM) $(EXEC)
-	$(RM) $(OBJS)
+	@$(RM) $(EXEC)
+	@$(RM) $(OBJS)
 	@make -C $(FT_PRINTF_PATH) fclean --silent
 	@echo "\n${BLUE} ◎ $(RED)All objects and executable cleaned successfully${BLUE} ◎$(DEF_COLOR)\n"
 	
