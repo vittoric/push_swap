@@ -6,7 +6,7 @@
 #    By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/21 15:12:38 by vcodrean          #+#    #+#              #
-#    Updated: 2023/02/28 12:35:34 by vcodrean         ###   ########.fr        #
+#    Updated: 2023/02/28 15:21:50 by vcodrean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ SRCS = push_swap2.c swap_first_two.c rotate_revers.c\
 FT_PRINTF_PATH = ft_printf/
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
 RM = rm -f
 
 %.o: %.c

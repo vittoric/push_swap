@@ -33,28 +33,40 @@ int main(int argc, char **argv)
   
         int size_list = ps_lst_size(stack_a);
         int index = 0;
-    if (size_list == 3)
+    /*if (size_list == 3)
     {
             algorithm3(&current);
     } else
-        ft_printf("Hola caracola");
+        ft_printf("Hola caracola");*/
         
-    int h;
-
-    h = 0;
-    while (h < 4)
+    int max = find_max(current);
+    int binary = dec_to_bin(max);
+    int h = 0;
+    
+    while (h < binary)
     {
+        index = 0;
         while (index < size_list) 
         {
             ps_pair(&stack_a, &stack_b, h);
             index++;
         }
         h++;
+        ft_printf("\n HHHH: %d", h);
     //devolver todos los b a a
+    //int x = 0;
+    //int size_listb = ps_lst_size(stack_b);
+    while (stack_b) 
+	{
+        ps_push(&stack_b, &stack_a, 'a');
+       // stack_b = stack_b->next;
+        //x++;
     }
+    }
+
     
 
-    int max = find_max(current);
+    
    ft_printf("\nMAX:%d\n", max);
    
    ft_printf("\nTamanñ en bits de MAX NUM : %d\n", dec_to_bin(max));
@@ -72,10 +84,10 @@ int main(int argc, char **argv)
     // Imprime los números almacenados en stack_a después de hacer push
    // current = stack_a;
    // ft_printf("\nDespués de push stack_a:\n");
-    while (current != NULL) 
+    while (stack_a != NULL) 
 	{
-        ft_printf("%d\n", current->num);
-        current = current->next;
+        ft_printf("%d\n", stack_a->num);
+        stack_a = stack_a->next;
     }
     
     current = stack_b;
