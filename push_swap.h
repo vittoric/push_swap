@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 15:18:41 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/28 13:07:16 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/02/28 15:14:50 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	rr_rotate(t_node **top_1, t_node **top_2);
 void	rrr_rotate(t_node **top_1, t_node **top_2);
 int 	check_order(t_node *top);
 long int	ps_atoi(const char *str);
-void	ps_pair(t_node **stack_a, t_node **stack_b, int i)
+void	ps_pair(t_node **stack_a, t_node **stack_b, int i);
 int		ps_lst_size(t_node *column);
 void	organize3(t_node **head_a, int inst);
 void	algorithm3(t_node **head_a);
