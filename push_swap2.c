@@ -29,6 +29,13 @@ int main(int argc, char **argv)
         ft_printf("%d\n", current->num);
         current = current->next;
     }*/
+
+    asiign_check(stack_a);
+    while (stack_a != NULL) 
+	{   
+        ft_printf("Nmero:%d ----> su posicion:%d\n",stack_a->num, stack_a->position);
+        stack_a = stack_a->next;
+    }
     
   
         int size_list = ps_lst_size(stack_a);
