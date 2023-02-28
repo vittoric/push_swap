@@ -32,19 +32,32 @@ int main(int argc, char **argv)
     
   
         int size_list = ps_lst_size(stack_a);
-        //int index = 0;
+        int index = 0;
     if (size_list == 3)
     {
             algorithm3(&current);
     } else
         ft_printf("Hola caracola");
-        /*
-    while (index < size_list) 
-   	{
-        ps_pair(&stack_a, &stack_b);
-        index++;
-    }*/
+        
+    int h;
+
+    h = 0;
+    while (h < 4)
+    {
+        while (index < size_list) 
+        {
+            ps_pair(&stack_a, &stack_b, h);
+            index++;
+        }
+        h++;
+    //devolver todos los b a a
+    }
     
+
+    int max = find_max(current);
+   ft_printf("\nMAX:%d\n", max);
+   
+   ft_printf("\nTamanñ en bits de MAX NUM : %d\n", dec_to_bin(max));
    
    // ft_printf("Total movimientos: %d\n", index);
     ft_printf("\nDespués de buscar pares stack_a:\n");
