@@ -38,7 +38,8 @@ int main(int argc, char **argv)
             algorithm3(&current);
     } else
         ft_printf("Hola caracola");*/
-        
+    int min = find_min(current);
+    
     int max = find_max(current);
     int binary = dec_to_bin(max);
     int h = 0;
@@ -67,7 +68,8 @@ int main(int argc, char **argv)
     
 
     
-   ft_printf("\nMAX:%d\n", max);
+   ft_printf("\nMAX: %d\n", max);
+   ft_printf("\nMIN: %d\n", min);
    
    ft_printf("\nTamanñ en bits de MAX NUM : %d\n", dec_to_bin(max));
    
