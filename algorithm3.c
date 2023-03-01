@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 18:31:47 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/27 19:04:34 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/03/01 18:08:23 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,3 +66,56 @@ void	algorithm3(t_node **head_a)
 		organize3(head_a, 5);
 
 }
+
+void algorithm5(t_node **stack_a, t_node **stack_b)
+{
+	while(ps_lst_size(*stack_a) > 3)
+	{
+		while (find_num(*stack_a, get_min_value(*stack_a)) != 0)
+		{
+			if (find_num(*stack_a, get_min_value(*stack_a)) 
+			<= (ps_lst_size(*stack_a) / 2))
+				rotate(stack_a, 'a');
+			else
+				revers_rotate(stack_a, 'a');
+		}
+		if (find_num(*stack_a, get_min_value(*stack_a)) == 0)
+			ps_push(stack_a, stack_b, 'b');
+	}
+	algorithm3(stack_a);
+	while (*stack_b)
+		ps_push(stack_b, stack_a, 'a');
+}
+/*
+void algorithm5(t_node **stack_a, t_node **stack_b)
+{
+    int i;
+    int size;
+
+    i = 0;
+    size = ps_lst_size(*stack_a);
+    while (!check_order(*stack_a))
+    {       
+		 i = 0;
+        if (size == 4 || size == 5)
+        {
+            while (i < 2)
+            {
+                ps_push(stack_a, stack_b, 'b');
+                i++;
+            }
+            algorithm3(stack_a);
+            while (*stack_b)
+            {
+                if ((*stack_b)->next && (*stack_b)->num < (*stack_b)->next->num)
+        		{
+            		ps_push(stack_b, stack_a, 'a');
+            		rotate(stack_a, 'a');
+       		 	}
+        		else
+            		ps_push(stack_b, stack_a, 'a');
+            }
+        }
+    }
+}
+*/

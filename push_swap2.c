@@ -19,9 +19,14 @@ int main(int argc, char **argv)
         ps_add_back(&stack_a, new_node);
 
         i++;
-    }
 
-    t_node *current = stack_a;
+        
+    }
+    
+    //ft_printf("list size:%d \n",ps_lst_size(stack_a));
+    if(ps_lst_size(stack_a) == 5)
+        algorithm5(&stack_a, &stack_b);
+    /*t_node *current = stack_a;
     assign_check(stack_a);
     while (current != NULL) 
 	{   
@@ -29,7 +34,7 @@ int main(int argc, char **argv)
         current = current->next;
     }
      
-    radix_algorithm(&stack_a, &stack_b);
+    radix_algorithm(&stack_a, &stack_b);*/
     
     /*if (size_list == 3)
     {
@@ -37,7 +42,7 @@ int main(int argc, char **argv)
     } else
         ft_printf("Hola caracola");*/
     
-    print_column(stack_a, stack_b);
+    //print_column(stack_a, stack_b);
     ps_lst_clear(&stack_a);
     ps_lst_clear(&stack_b);
 
