@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ps_push.c                                          :+:      :+:    :+:   */
+/*   radix_algorithm.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/23 16:09:36 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/03/01 11:56:06 by vcodrean         ###   ########.fr       */
+/*   Created: 2023/03/01 12:02:23 by vcodrean          #+#    #+#             */
+/*   Updated: 2023/03/01 12:24:40 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ps_push(t_node **column1, t_node **column2, char c)
+void	radix_algorithm(t_node **stack_a, t_node **stack_b)
 {
-    t_node  *aux;
-    
-    if (column1 && *column1)
-    {
-        aux = *column1;
-        *column1 = (*column1)->next;
-        ps_add_front(&*column2, aux);
-        if (c == 'a' || c == 'b')
-            ft_printf("p%c\n", c);
-    }
+	int		index;
+	int		size_list;
+	int		binary;
+	int		h;
+
+	size_list = ps_lst_size(*stack_a);
+	binary = dec_to_bin(find_max(*stack_a));
+	h = 0;
+	while (h < binary)
+	{
+		index = 0;
+		while (index < size_list)
+		{
+			ps_pair(stack_a, stack_b, h);
+			index++;
+		}
+		h++;
+		while (*stack_b)
+			ps_push(stack_b, stack_a, 'a');
+	}
+	ft_printf("\nTotal moves: %d\n", h*index);
 }
