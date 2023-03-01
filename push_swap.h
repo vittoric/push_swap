@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 15:18:41 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/28 20:31:03 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/03/01 11:08:01 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,9 @@ void		organize3(t_node **head_a, int inst);
 void		algorithm3(t_node **head_a);
 int			dec_to_bin(int decimal);
 int			find_max(t_node *stack);
-int			find_min(t_node *stack);
+int			get_min_value(t_node *stack);
 void		assign_position(t_node *stack, int value);
-void    	asiign_check(t_node *stack);
+void    	assign_check(t_node *stack);
+void 		simplify_negatives(t_node *stack);
 
 #endif

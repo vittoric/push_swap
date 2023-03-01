@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:42:00 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/24 17:28:06 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/03/01 10:46:33 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ void	rotate(t_node **top, char c)
 	if (*top == NULL || (*top)-> next == NULL)
 		return ;
 	*top = (*top)-> next;
-	ps_add_back(top, ps_lst_new(current->num));
+	ps_add_back(top, current);
+	current->next = NULL;
    //free(current);
    if (c == 'a' || c == 'b')
 		ft_printf("r%c\n", c);

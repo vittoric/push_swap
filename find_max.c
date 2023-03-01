@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 12:47:43 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/28 16:27:36 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/03/01 09:46:52 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,20 @@
 int	find_max(t_node *stack)
 {
 	t_node	*aux;
-	int		max;
+	unsigned int		max;
 
-	max = stack->num;
+	max = stack->position;
 	aux = stack->next;
 	while (aux)
 	{
-		if (aux->num > max)
-			max = aux->num;
+		if (aux->position > max)
+			max = aux->position;
 		aux = aux->next;
 	}
 	return (max);
 }
 
-int	find_min(t_node *stack)
+int	get_min_value(t_node *stack)
 {
 	t_node	*aux;
 	int		min;

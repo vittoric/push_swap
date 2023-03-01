@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:42:00 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/28 16:52:07 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/03/01 11:03:50 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 void rotate (t_node **top)
 {
     t_node *current;
-   // t_node *temp;
-    // No hacer nada si el stack está vacío o sólo tiene un elemento
+   
     if (*top == NULL || (*top)-> next == NULL)
         return ;
     current = *top;
