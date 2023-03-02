@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 12:02:23 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/03/01 12:24:40 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/03/02 20:27:21 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,21 @@ void	radix_algorithm(t_node **stack_a, t_node **stack_b)
 	int		binary;
 	int		h;
 
+
 	size_list = ps_lst_size(*stack_a);
 	binary = dec_to_bin(find_max(*stack_a));
-	h = 0;
+	h = 0;	
+	printf("Inmprimir :  %d     \nMAX %d\n", size_list,find_max(*stack_a) );
 	while (h < binary)
 	{
 		index = 0;
 		while (index < size_list)
 		{
-			ps_pair(stack_a, stack_b, h);
+			ps_bit(stack_a, stack_b, h);
 			index++;
 		}
 		h++;
 		while (*stack_b)
 			ps_push(stack_b, stack_a, 'a');
 	}
-	ft_printf("\nTotal moves: %d\n", h*index);
 }

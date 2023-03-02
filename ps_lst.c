@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 17:20:12 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/03/01 13:25:24 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/03/02 12:34:17 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ t_node	*ps_lst_new(int num)
 		return (NULL);
 	new_elem->num = num;
 	new_elem->next = NULL;
+	new_elem->position = 0;
 	return (new_elem);
 }
 

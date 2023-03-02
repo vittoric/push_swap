@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 19:46:06 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/23 19:46:07 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/03/02 12:38:14 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int check_order(t_node *top)
     t_node *aux;
 
     aux = top;
-// la lista está vacía o solo tiene un elemento, por lo que está ordenada
     if(!aux || !aux->next)
         return (1);
     while (aux->next != NULL)

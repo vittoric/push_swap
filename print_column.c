@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 12:28:25 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/03/01 12:43:06 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/03/02 11:57:57 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,6 @@ void	print_column(t_node *stack_a, t_node *stack_b)
 	}
 	ft_printf("____________  ____________\nstack a       stack b\n");
 }
+
+
+ 
