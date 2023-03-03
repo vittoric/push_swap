@@ -6,7 +6,7 @@
 #    By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/21 15:12:38 by vcodrean          #+#    #+#              #
-#    Updated: 2023/03/02 21:15:55 by vcodrean         ###   ########.fr        #
+#    Updated: 2023/03/03 15:43:55 by vcodrean         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,10 +32,11 @@ MID_GRAY =		\033[38;5;245m
 DARK_GREEN =	\033[38;2;75;179;82m
 DARK_YELLOW =	\033[38;5;143m
 
-SRCS = push_swap2.c swap_first_two.c rotate_revers.c\
+SRCS = push_swap.c swap_first_two.c rotate_revers.c\
 		ps_lst.c ps_push.c check_order.c ps_utils.c ps_bit.c\
 		algorithm3.c dec_to_bin.c find_max.c assign_position.c\
-		radix_algorithm.c print_column.c error.c create_col.c
+		radix_algorithm.c print_column.c error.c create_col.c\
+		double_ckeck.c
 		
 
 FT_PRINTF_PATH = ft_printf/

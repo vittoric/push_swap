@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:35:40 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/02/24 17:25:53 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/03/03 12:12:44 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,12 @@ void	swap_first_two(t_node **top, char c)
 	t_node	*first;
 	t_node	*second;
 	t_node	*temp;
-// Verifica si hay al menos dos elementos en el stack
+
 	if (*top == NULL || (*top)-> next == NULL)
 		return ;
- // Guarda los punteros a los primeros dos nodos
 	first = *top;
 	second = (*top)-> next;
- // Actualiza los punteros para que el segundo nodo se convierta en el nuevo tope
 	*top = second;
-// Intercambiar los punteros next de los dos nodos para invertir el orden
 	temp = second -> next;
 	second -> next = first;
 	first -> next = temp;

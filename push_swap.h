@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 15:18:41 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/03/02 21:12:16 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/03/03 15:26:32 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 # include "libft/libft.h"
 
 typedef struct node{
-	int				num;
+	long long		num;
 	unsigned int	position;
 	struct node		*next;
 }	t_node;
@@ -29,7 +29,7 @@ void			swap_first_two(t_node **top, char c);
 void			rotate(t_node **top, char c);
 t_node			*ps_lst_last(t_node *first);
 void			ps_add_back(t_node **column, t_node *new);
-t_node			*ps_lst_new(int num);
+t_node			*ps_lst_new(long long num);
 void			revers_rotate(t_node **top, char c);
 void			ps_add_front(t_node **column, t_node *new);
 void			ps_lst_clear(t_node **column);
@@ -55,4 +55,7 @@ int				ps_lst_size(t_node *column);
 void			algorithm5(t_node **stack_a, t_node **stack_b);
 void			error(int c);
 int				creat_col(t_node **stack, int argc, char **argv);
+int				double_ckeck(t_node *stack);
+int				check_argv(char *str);
+void			select_algorithm(t_node **stack_a, t_node **stack_b);
 #endif

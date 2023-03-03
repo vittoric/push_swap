@@ -6,7 +6,7 @@
 /*   By: vcodrean <vcodrean@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 12:59:29 by vcodrean          #+#    #+#             */
-/*   Updated: 2023/03/02 13:02:35 by vcodrean         ###   ########.fr       */
+/*   Updated: 2023/03/03 11:37:13 by vcodrean         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	error(int c)
 {
 	if (c == 1)
-		ft_printf("\nError");
+		ft_printf("Error\n");
 }
